@@ -1,0 +1,122 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body::before {
+    content: ''; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.767); 
+    z-index: -1; 
+}
+
+body {
+    margin: 0;
+    padding: 0%;
+    background-image: url("img/Flashs/Skull\ Chardon.jpg") ; 
+    background-size: 120% ;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "Raleway", sans-serif;
+}
+
+.fullscreen-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.container-infobox {
+    position: fixed;
+    bottom: 0px;
+    z-index: 99;   
+}
+
+
+.info-box {
+
+    margin-left: 20px;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.5); 
+    border-radius: 15px 15px 0 0; 
+    padding: 20px; 
+    width: 300px;
+    padding-bottom: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    overflow: auto;
+}
+
+.flash-box {
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    border: 2px;
+    z-index: 3; 
+    border-radius: 10px; 
+    overflow: hidden; 
+    background-color: rgba(255, 255, 255, 0); 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+.flash-box img {
+    max-height: 100%; 
+    max-width: 100%; 
+    display: block; 
+    object-fit: contain; 
+}
+
+  
+/*sliders bouton*/
+.slidecontainer {
+    width: 100%; 
+  }
+  
+  .slider {
+    -webkit-appearance: none;  
+    appearance: none;
+    width: 100%; 
+    height: 10px; 
+    background: #94949483; 
+    border-radius: 10px;
+    outline: none; 
+   
+  }
+  
+  /* Mouse-over effects */
+  .slider:hover {
+    opacity: 1; 
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 25px; 
+    height: 25px;
+    background: #000000;
+    cursor: pointer; 
+    border-radius: 50%; 
+  
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px; 
+    height: 25px; 
+    background: #000000; 
+    cursor: pointer; 
+  }
+  
