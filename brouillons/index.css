@@ -5,6 +5,7 @@ body {
     position: relative;
     min-height: 100vh;
     background: linear-gradient(to right, #26a0da, #314755);
+    background-attachment: fixed;
     font-family: 'League Gothic', sans-serif;
     color: rgb(3, 10, 31);
     font-family: Arial, sans-serif;
@@ -25,7 +26,6 @@ body::before {
     right: 0;
     bottom: 0;
     background-image: url('B_N\ Bridge.png');
-    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     z-index: -1;
@@ -71,6 +71,7 @@ body::before {
 }
 
 .welcome-section {
+    padding: 20px;
     background: rgba(126, 209, 232, 0.11);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -78,6 +79,21 @@ body::before {
     -webkit-backdrop-filter: blur(2.6px);
     border: 1px solid rgba(126, 209, 232, 0.13);
     margin: 2vh;
+    transition: 0.5s ease-in-out;
+}
+
+.welcome-section:hover {
+  margin-top: 50px;
+  background: rgba(126, 209, 232, 0.329);
+  border-radius: 16px;
+  box-shadow: 1px 3px 15px #000000;
+  background: rgba(255, 255, 255, 0.53);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.3px);
+  -webkit-backdrop-filter: blur(6.3px);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  margin: 2vh;
 }
 
 .codding-section {
@@ -264,6 +280,5 @@ body::before {
   background-position: center;
   transition: 0.5s ease-in-out;
 }
-
 
 
