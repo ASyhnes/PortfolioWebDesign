@@ -50,6 +50,7 @@ body::before {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   justify-content: center;
   transition: 0.5s ease-in-out;
 }
@@ -80,6 +81,21 @@ h1 {
   font-size: 3rem;
 }
 
+h2 {
+  font-size: 1.5rem;
+
+}
+
+h3 {
+  font-size: 0.9rem;
+
+}
+
+h4 {
+  font-size: 0.5rem;
+
+}
+
 .image {
   max-width: 60vh;
   height: auto;
@@ -106,9 +122,8 @@ h1 {
 }
 
 .flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg) translateY(-50%) translateX(60%);
-  width: 80vw;
-  height: 150px;
+  transform: rotateY(180deg) ;
+  
 }
 
 .flip-card-front,
@@ -120,6 +135,7 @@ h1 {
   backface-visibility: hidden;
   font-family: 'Roboto', sans-serif;
   color: #000000;
+  X
 }
 
 .flip-card-front {
@@ -141,13 +157,14 @@ h1 {
   transform: rotateY(180deg);
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start; /* Aligner le contenu à gauche */
+ /* Aligner le contenu à gauche */
   padding: 20px; /* Ajoute un peu d'espace autour du contenu */
   font-weight: normal; /* Rend le texte moins gras */
-  font-size: larger;
-  text-align: left; /* Assure que le texte est aligné à gauche */
+  font-size: larger; /* Assure que le texte est aligné à gauche */
   font-weight: normal; /* Rend le texte moins gras */
-  font-size: 3vh;
+  font-size: 2.5vh;
+  height: auto;
+  
 }
 
 .flip-card-front,
@@ -165,14 +182,10 @@ h1 {
 
 /* Progress Bar Styles */
 
-.progress-bar-container h3 {
-  margin-bottom: 10px;
-  color: rgba(15, 141, 150, 0.747);
-  font-size: 1rem;
-}
+
 .progress-bar {
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-  background-color: rgba(14, 239, 255, 0.281);
+  background-color: rgba(82, 113, 116, 0.158);
   border-radius: 5px;
   width: 100%;
   height: 20px;
@@ -191,32 +204,17 @@ h1 {
 /*clickbuton*/
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
 
-.slideThree {
-  width: 20px;
-  height: 12px;
-  background: #333;
-  margin: 20px auto;
-
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  border-radius: 50px;
-  position: relative;
-
-  -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5),
-    0px 1px 0px rgba(255, 255, 255, 0.2);
-  -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5),
-    0px 1px 0px rgba(255, 255, 255, 0.2);
-  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5),
-    0px 1px 0px rgba(255, 255, 255, 0.2);
-}
 
 .container {
   display: flex;
-  height: 50vh;
+  height: 70vh;
   justify-content: center;
-  gap: 50px;
+  gap: 30px;
   border-radius: 0.5rem;
-  margin: 20vh;
+  margin: 10vh;
+ 
+  padding-left: 20vh;
+  padding-right: 20vh;
 
   > div {
     flex: 0 0 120px;
@@ -226,7 +224,7 @@ h1 {
     box-shadow: 1px 5px 15px #494949;
     position: relative;
     overflow: hidden;
-    border-radius: 16px;
+   
     box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
       rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
       rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
@@ -236,32 +234,35 @@ h1 {
 
     &:nth-of-type(1) {
       background: url("BN\ Apes\ Hope.png") no-repeat center;
-      background-size: 55vh;
+      background-size: 80vh;
     }
     &:nth-of-type(2) {
       background: url("1_2021_3_propafish_common.png") no-repeat center;
-      background-size: 55vh;
+      background-size: 80vh;
     }
     &:nth-of-type(3) {
       background: url("MINI_LOGO.png") no-repeat center;
-      background-size: 55vh;
+      background-size: 80vh;
     }
 
     .content {
       font-size: 1rem;
+      line-height: 0.7;
       text-decoration: none;
       color: #020a31;
       display: flex;
       align-items: center;
+      text-align: center;
+  justify-content: center;
       padding: 10px;
       opacity: 0;
       flex-direction: column;
       height: 101%;
       justify-content: flex-end;
-      background: rgb(2, 2, 46);
+      background: rgb(6, 6, 141);
       background: linear-gradient(
         0deg,
-        rgba(2, 2, 46, 0.6755077030812324) 0%,
+        rgba(134, 134, 151, 0.918) 60%,
         rgba(255, 255, 255, 0) 100%
       );
       transform: translatey(100%);
@@ -281,9 +282,6 @@ h1 {
       box-shadow: 1px 3px 15px #000000;
       transform: translatey(-30px);
       border-radius: 16px;
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-      backdrop-filter: blur(9.4px);
-      -webkit-backdrop-filter: blur(9.4px);
       border: 1px solid rgba(126, 209, 232, 0.13);
     }
 
@@ -297,9 +295,9 @@ h1 {
 
 .container > div:hover {
   z-index: 9999;
-  flex: 0 0 250px;
+  flex: 0 0 110px;
   box-shadow: 1px 3px 15px #000000;
-  transform: translateY(10%) scale(2);
+  transform: translateY(10%) scale(1.5);
   margin-bottom: 20px;
 }
 
@@ -308,38 +306,48 @@ h1 {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
   z-index: 9999;
   background-size: cover;
   background-position: center;
   transition: 0.5s ease-in-out;
 }
 
-.parallax1 {
+.parallax {
   /* The image used */
   background-image: url("BAS-FONDS_basse-ville.jpg");
 
   /* Full height */
-  height: 100%;
+  height: 100vh;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  padding: auto;
   background-size: cover;
-
-  /* Couvre toute la largeur */
-  width: 100vw; /* Assure que l'élément occupe toute la largeur de la fenêtre de visualisation */
-  padding: 20px;
 }
 
 .full-width {
     width: 100%; /* Fait en sorte que la div prenne toute la largeur */
-    pading 20%;
+   
     background-color: rgb(27, 27, 27); /* Définit le fond en noir */
     color: white; /* Définit la couleur du texte en blanc pour contraster avec le fond noir */
     text-align: center; /* Centre le texte à l'intérieur de la div */
     padding: 20px 0; /* Ajoute un peu de padding vertical pour l'espace autour du texte */
     font-family: 'Roboto', sans-serif; /* Utilise Roboto si vous l'avez importée, sinon tombe sur la police sans-serif par défaut */
+}
+
+
+
+.container2{
+  display: flex; /* Utilise Flexbox pour aligner les enfants horizontalement */
+  align-items: center; /* Centre les éléments verticalement dans le conteneur */
+  justify-content: space-around; /* Répartit un espace égal autour des éléments */
+}
+
+.inner-div {
+  width: 200px; /* Largeur de 200px pour chaque div interne */
+  height: 250px; /* Hauteur de 100px pour chaque div interne */
+  /* Ajoutez d'autres styles ici si nécessaire, par exemple, pour le fond ou les bordures */
+  background-color: lightgrey; /* Couleur de fond pour visualiser les divs */
+  margin: 10px; /* Espace autour de chaque div interne */
 }
