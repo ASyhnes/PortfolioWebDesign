@@ -12,6 +12,7 @@ nav{
   top: 0;
   position: fixed;
   width: 100%;
+  z-index: 99;
 }
 
 nav, .nav-links .drop-menu {
@@ -41,7 +42,7 @@ nav .wrapper{
     display: flex;
     align-items: center;
     justify-content: flex-start;
-
+    z-index: 99;
   }
 
 .wrapper .logo a{

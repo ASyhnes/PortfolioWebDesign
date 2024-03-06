@@ -1,0 +1,93 @@
+:root {
+  /* Set neon color */
+  --neon-border-color: #08f;
+}
+.dex {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Crée exactement deux colonnes */
+    gap: 20px; /* Espacement entre les éléments de la grille */
+    width: 100%;
+    height: auto;
+    justify-content: center ; /* Centre les éléments horizontalement dans leur conteneur */
+    align-items: start; /* Alignez les éléments au début de leurs cellules de grille verticalement */
+    padding: 20px; /* Ajoute un peu de padding autour de la grille */
+    background-image: url("/CROQUIS_GRUES_FULL_1_TO_5.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10vh;
+    padding-left: 20vw;
+  }
+
+item::-moz-selection {
+  background-color: var(--neon-border-color);
+}
+
+.item::selection {
+  background-color: var(--neon-border-color);
+}
+
+.item {
+  width: 30vh; /* 50% pour deux colonnes, -20px pour compter une marge */
+  height: 40vh; /* 50% pour deux lignes */
+  margin: 10px; /* Marge entre les éléments */
+  justify-content: center;
+  align-items: center center;
+  transition: transform 0.3s ease; /* Transition pour l'effet de zoom */
+  cursor: pointer; /* Change le curseur pour indiquer la cliquabilité */
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.7px);
+  -webkit-backdrop-filter: blur(6.7px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 0.4rem solid #fff;
+  animation: flicker 1.5s infinite alternate;
+}
+
+.item:hover {
+  transform: scale(1.5);
+  z-index: 99; /* Zoom un peu quand on survole */
+}
+
+.item img {
+  max-width: 100%; /* Assure que l'image ne dépasse pas de sa div conteneur */
+  height: auto; /* Garde le ratio de l'image */
+}
+
+.item iframe {
+    width: 100%; /* Assure que l'image ne dépasse pas de sa div conteneur */
+    height: 100%; /* Garde le ratio de l'image */
+  }
+
+.item a {
+  text-decoration: none; /* Enlève le soulignement des liens */
+  color: inherit; /* Les liens utilisent la couleur de texte du parent */
+}
+
+.item p {
+  text-align: center; /* Centre le texte */
+}
+
+/* Animate neon flicker */
+@keyframes flicker {
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    box-shadow: 0 0 0.5rem #fff, inset 0 0 0.5rem #fff,
+      0 0 2rem var(--neon-border-color), inset 0 0 2rem var(--neon-border-color),
+      0 0 4rem var(--neon-border-color), inset 0 0 4rem var(--neon-border-color);
+  }
+
+  20%,
+  24%,
+  55% {
+    box-shadow: none;
+  }
+}
