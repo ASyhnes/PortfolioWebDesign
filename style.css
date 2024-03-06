@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Gothic&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
+/* Global Body Styles */
 body {
   font-family: "League Gothic", sans-serif;
   color: rgb(3, 10, 31);
@@ -14,10 +15,7 @@ body {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 body::before {
@@ -35,6 +33,7 @@ body::before {
   opacity: 0.2;
 }
 
+/* Presentation Container Styles */
 .conteneur-presentation {
   position: relative;
   background-size: contain;
@@ -43,7 +42,7 @@ body::before {
   padding: 30px;
   border-radius: 10px;
   margin: 10vh;
-  width: 100vh;
+  width: 120vh;
   height: auto;
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.137);
   display: flex;
@@ -63,8 +62,7 @@ body::before {
   bottom: 0;
   background: rgba(255, 255, 255, 0.055);
   border-radius: 16px;
-  box-shadow: rgba(75, 74, 74, 0.3) 0px 19px 38px,
-    rgba(20, 169, 214, 0.22) 0px 15px 12px;
+  box-shadow: rgba(75, 74, 74, 0.3) 0px 19px 38px, rgba(20, 169, 214, 0.22) 0px 15px 12px;
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(2.5px);
   border: 1px solid rgba(255, 255, 255, 0.03);
@@ -72,6 +70,7 @@ body::before {
   border-radius: 10px;
 }
 
+/* Secondary Presentation Container Styles */
 .conteneur-presentation2 {
   position: relative;
   background-size: contain;
@@ -80,7 +79,7 @@ body::before {
   padding: 30px;
   border-radius: 10px;
   margin: 3vh;
-  width: 100vh;
+  width: 150vh;
   height: auto;
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.137);
   display: flex;
@@ -100,29 +99,46 @@ body::before {
   bottom: 0;
   background: rgba(255, 255, 255, 0.055);
   border-radius: 16px;
-  box-shadow: rgba(75, 74, 74, 0.3) 0px 19px 38px,
-    rgba(20, 169, 214, 0.22) 0px 15px 12px;
+  box-shadow: rgba(75, 74, 74, 0.3) 0px 19px 38px, rgba(20, 169, 214, 0.22) 0px 15px 12px;
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(2.5px);
   border: 1px solid rgba(255, 255, 255, 0.03);
   z-index: -1;
   border-radius: 10px;
-  flex-direction: row;
 }
 
+/* Side Text Styles */
+.side-text {
+  font-family: "Roboto", sans-serif;
+  color: rgb(3, 10, 31);
+  padding: 1vh 1vw;
+  box-sizing: border-box;
+}
 
-
-.texte {
-  max-width: 60%;
+/* Text and Progress Bar Container Styles */
+.texte, .progress-bar-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  height: 100%;
 }
 
-h1 {
-  font-size: 3rem;
+/* Link Styles */
+.link {
+  transition: 0.5s ease-in-out;
+  border-radius: 7px;
 }
 
-h2 {
-  font-size: 1.5rem;
+.link:hover {
+  transform: scale(1.1);
+}
+
+/* Heading Styles */
+h1, h2, p, p2 {
+  margin: 5px 0;
+  padding: 0;
+  font-size: calc(0.8rem + 1vw);
 }
 
 h3 {
@@ -137,15 +153,13 @@ p {
   font-size: 2rem;
 }
 
-p2 {
-  font-size: 1.5rem;
-}
-
+/* Image Styles */
 .image {
   max-width: 60vh;
   height: auto;
 }
 
+/* Progress Bar Styles */
 .progress-bar {
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   background-color: rgba(82, 113, 116, 0.521);
@@ -156,118 +170,69 @@ p2 {
 }
 
 .progress {
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
-    rgba(0, 0, 0, 0.2) 0px -3px 1px 1px inset;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 1px 1px inset;
   background-color: rgba(64, 150, 15, 0.685);
   height: 100%;
   border-radius: 3px;
 }
 
-/*clickbuton*/
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
-
-.parallax1 {
-  /* The image used */
-  background-image: url("Background.png");
-
-  /* Full height */
-  height: 100vh;
-  width: 100%;
-
-  /* Create the parallax scrolling effect */
+/* Parallax Background Styles */
+.parallax1, .parallax2, .parallax3 {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
-
-  /*display*/
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+.parallax1 {
+  background-image: url("Background.png");
+  height: 100vh;
+  width: 100%;
   flex-direction: column;
-  
 }
 
 .parallax2 {
-  /* The image used */
   background-image: url("/eolienne.jpg");
-
-  /* Full height */
   height: 100vh;
   width: 100%;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -1;
-
-  /*display*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 
 .parallax3 {
-  /* The image used */
   background-image: url("/Backgroundfish.png");
-
-  /* Full height */
   height: auto;
   width: 100%;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -1;
-
-  /*display*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   gap: 20px;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-
+/* Full Width Container Styles */
+.full-width, .full-width2 {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  font-family: "Roboto", sans-serif;
+}
 
 .full-width {
-  width: 100%; /* Fait en sorte que la div prenne toute la largeur */
-
-  background-color: rgb(27, 27, 27); /* Définit le fond en noir */
-  color: white; /* Définit la couleur du texte en blanc pour contraster avec le fond noir */
-  text-align: center; /* Centre le texte à l'intérieur de la div */
-  padding: 20px 0; /* Ajoute un peu de padding vertical pour l'espace autour du texte */
-  font-family: "Roboto", sans-serif; /* Utilise Roboto si vous l'avez importée, sinon tombe sur la police sans-serif par défaut */
+  background-color: rgb(27, 27, 27);
+  color: white;
 }
+
 .full-width2 {
-  width: 100%; /* Fait en sorte que la div prenne toute la largeur */
-
-  background-color: rgba(175, 9, 9, 0.473); /* Définit le fond en noir */
-  color: rgba(
-    41,
-    2,
-    2,
-    0.699
-  ); /* Définit la couleur du texte en blanc pour contraster avec le fond noir */
-  text-align: center; /* Centre le texte à l'intérieur de la div */
-  padding: 20px 0; /* Ajoute un peu de padding vertical pour l'espace autour du texte */
-  font-family: "Roboto", sans-serif; /* Utilise Roboto si vous l'avez importée, sinon tombe sur la police sans-serif par défaut */
+  background-color: rgba(175, 9, 9, 0.473);
+  color: rgba(41, 2, 2, 0.699);
 }
 
+/* Inner Div Styles */
 .inner-div {
-  width: 200px; /* Largeur de 200px pour chaque div interne */
-  height: 250px; /* Hauteur de 100px pour chaque div interne */
-  /* Ajoutez d'autres styles ici si nécessaire, par exemple, pour le fond ou les bordures */
-  background-color: lightgrey; /* Couleur de fond pour visualiser les divs */
-  margin: 10px; /* Espace autour de chaque div interne */
+  width: 200px;
+  height: 250px;
+  background-color: lightgrey;
+  margin: 10px;
 }
