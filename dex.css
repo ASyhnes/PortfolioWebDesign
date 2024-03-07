@@ -40,8 +40,8 @@ item::selection {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20vw;
-  height: 20vw;
+  width: 15vw;
+  height: 15vw;
   margin: 10px;
   transition: transform 0.3s ease;
   cursor: pointer;
@@ -57,8 +57,8 @@ item::selection {
 }
 
 .item2 {
-  width: 20vw;
-  height: 20vw;
+  width: 15vw;
+  height: 15vw;
   margin: 10px;
   justify-content: center;
   align-items: center;
@@ -72,12 +72,12 @@ item::selection {
   -webkit-backdrop-filter: blur(6.7px);
   border: 1px solid rgba(255, 255, 255, 0.25);
   border: 0.4rem solid #fff;
-  animation: flicker 1.5s infinite alternate;
+  animation: flicker2 2s infinite alternate;
 }
 
 .item3 {
-  width: 20vw;
-  height: 20vw;
+  width: 15vw;
+  height: 15vw;
   margin: 10px;
   justify-content: center;
   align-items: center;
@@ -91,10 +91,30 @@ item::selection {
   -webkit-backdrop-filter: blur(6.7px);
   border: 1px solid rgba(255, 255, 255, 0.25);
   border: 0.4rem solid #fff;
-  animation: flicker 1.5s infinite alternate;
+  animation: flicker3 6s infinite alternate;
 }
 
-.item:hover, .item2:hover, .item3:hover {
+.item4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15vw;
+  height: 15vw;
+  margin: 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  background-image: url("coddinggame.jpg");
+  background-size: cover;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.7px);
+  -webkit-backdrop-filter: blur(6.7px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 0.4rem solid #fff;
+  animation: flicker 3s infinite alternate;
+}
+
+.item:hover, .item2:hover, .item3:hover, .item4:hover {
   transform: scale(1.5);
   z-index: 99;
 }
@@ -105,7 +125,7 @@ item::selection {
   border: none;
 }
 
-.item iframe {
+.item4 iframe {
   width: 100%;
   height: 100%;
   border: none;
@@ -120,19 +140,33 @@ item::selection {
 /* Neon Flicker Animation */
 @keyframes flicker {
   0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    text-shadow:
-    -0.2rem -0.2rem 1rem #fff,
-    0.2rem 0.2rem 1rem #fff,
-    0 0 2rem var(--neon-text-color),
-    0 0 4rem var(--neon-text-color),
-    0 0 6rem var(--neon-text-color),
-    0 0 8rem var(--neon-text-color),
-    0 0 10rem var(--neon-text-color);
     box-shadow: 0 0 0.5rem #fff, inset 0 0 0.5rem #fff,
       0 0 2rem var(--neon-border-color), inset 0 0 2rem var(--neon-border-color),
       0 0 4rem var(--neon-border-color), inset 0 0 4rem var(--neon-border-color);
   }
   20%, 24%, 55% {
+    box-shadow: none;
+  }
+}
+
+@keyframes flicker2 {
+  0%, 6%, 12%, 36%, 16%, 46%, 48%, 100% {
+    box-shadow: 0 0 0.5rem #fff, inset 0 0 0.5rem #fff,
+      0 0 2rem var(--neon-border-color), inset 0 0 2rem var(--neon-border-color),
+      0 0 4rem var(--neon-border-color), inset 0 0 4rem var(--neon-border-color);
+  }
+  11%, 15%, 47% {
+    box-shadow: none;
+  }
+}
+
+@keyframes flicker3 {
+  0%, 17%, 12%, 24%, 16%, 46%, 48%, 97%, 13%, 67%, 17%, 13% {
+    box-shadow: 0 0 0.5rem #fff, inset 0 0 0.5rem #fff,
+      0 0 2rem var(--neon-border-color), inset 0 0 2rem var(--neon-border-color),
+      0 0 4rem var(--neon-border-color), inset 0 0 4rem var(--neon-border-color);
+  }
+  11%, 100%, 47% {
     box-shadow: none;
   }
 }
