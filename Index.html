@@ -190,24 +190,25 @@
         <form action="sendEmail.php" method="post">
 
             <label for="fname">Nom & prénom</label>
-            <input type="text" id="fname" name="firstname" placeholder="Votre nom et prénom">
+            <input type="text" id="fname" name="nom" placeholder="Votre nom et prénom">
 
             <label for="sujet">Sujet</label>
-            <input type="text" id="sujet" name="sujet" placeholder="L'objet de votre message">
+            <input type="text" id="sujet" name="objet" placeholder="L'objet de votre message">
 
             <label for="emailAddress">Email</label>
             <input id="emailAddress" type="email" name="email" placeholder="Votre email">
 
 
             <label for="subject">Message</label>
-            <textarea id="subject" name="subject" placeholder="Votre message" style="height:200px"></textarea>
+            <textarea id="subject" name="message" placeholder="Votre message" style="height:200px"></textarea>
 
-            <input type="submit" value="Envoyer">
+            <input type="submit" name="envoyer" value ="envoyer"/>
         </form>
 
 
 
     </div>
+    
 
 
 

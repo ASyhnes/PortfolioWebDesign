@@ -1,26 +1,75 @@
-<?php
-// Vérifie si le formulaire a été soumis
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Assignation des données du formulaire à des variables
-    $name = htmlspecialchars($_POST['firstname']);
-    $subject = htmlspecialchars($_POST['sujet']);
-    $email = htmlspecialchars($_POST['email']);
-    $message = htmlspecialchars($_POST['subject']);
-    
-    // Votre adresse email
-    $to = 'syhnes@gmail.com';
-    $headers = "From: $email" . "\r\n" .
-               "Reply-To: $email" . "\r\n" .
-               "X-Mailer: PHP/" . phpversion();
+<?php        
+//si le bouton envoyer a été cliqué  
+if (isset($_POST["envoyer"])){   
+    //on recupère le nom  
+    $nom = $_POST["nom"];  
 
-    // Message
-    $fullMessage = "Vous avez reçu un message de: $name\n\n$message";
+    //on recupère l'adresse email  
+    $email = $_POST["email"];      
+    //on recupère l'objet du message  
+    $objet = $_POST["objet"];  
+    //on recupère le message  
+    $message = $_POST["message"];  
 
-    // Envoi de l'email
-    if (mail($to, $subject, $fullMessage, $headers)) {
-        echo 'Votre message a été envoyé avec succès.';
-    } else {
-        echo 'Désolé, une erreur est survenue lors de l\'envoi de votre message.';
-    }
+    $to = "syhnes@gmail.com";      
+    $headers = "From:" . $nom . "  " . $email;    
+    //on envoie le message avec la fonction mail  
+    $mailResult = mail($to,$objet,$message,$headers);
 }
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirmation d'envoi</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('Backgroundfish.png') no-repeat center center fixed; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        .message-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.5); /* Fond transparent */
+            padding: 20px;
+            border-radius: 15px; /* Bords arrondis */
+            text-align: center;
+        }
+        .retour-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px;
+            background: rgba(122, 185, 184, 0.2);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5.7px);
+            -webkit-backdrop-filter: blur(5.7px);
+            border: 1px solid rgba(122, 185, 184, 0.56);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<?php if (isset($mailResult)): ?>
+    <div class="message-box">
+        <?php 
+        if ($mailResult) {
+            echo "Ton message est bien envoyé.";
+        } else {
+            echo "Une erreur s'est produite.";
+        }
+        ?>
+        <br>
+        <a href="https://www.david-chardon.fr" class="retour-btn">Retour à la page d'accueil</a>
+    </div>
+<?php endif; ?>
+</body>
+</html>
