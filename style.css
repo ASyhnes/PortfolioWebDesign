@@ -305,24 +305,4 @@ p {
 }
 
 
-/* Style pour l'affichage sur les téléphones portables */
-@media screen and (max-width: 600px) {
-  body {
-      font-family: "Roboto", sans-serif; /* Utilisation d'une police plus adaptée pour les mobiles */
-      display: flex; /* Utilisation de flexbox pour centrer le contenu */
-      justify-content: center;
-      align-items: center;
-      height: 100vh; /* Hauteur complète de l'écran */
-      margin: 0;
-      background-color: white; /* Fond blanc */
-  }
-
-  body::before {
-      content: "Ce site n'est encore pas accessible sur portable. En attendant, je vous invite à le regarder sur un ordinateur.";
-      color: black; /* Couleur du texte */
-      text-align:
-
-
-
-
 
