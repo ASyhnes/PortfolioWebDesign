@@ -36,9 +36,14 @@ if (isset($_POST["envoyer"])){
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: rgba(255, 255, 255, 0.5); /* Fond transparent */
+            background: rgba(122, 185, 184, 0.2);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5.7px);
+            -webkit-backdrop-filter: blur(5.7px);
+            border: 1px solid rgba(122, 185, 184, 0.56);
             padding: 20px;
-            border-radius: 15px; /* Bords arrondis */
+            border-radius: 15px; 
             text-align: center;
         }
         .retour-btn {
@@ -51,8 +56,9 @@ if (isset($_POST["envoyer"])){
             backdrop-filter: blur(5.7px);
             -webkit-backdrop-filter: blur(5.7px);
             border: 1px solid rgba(122, 185, 184, 0.56);
-            color: white;
+            color: black;
             text-decoration: none;
+            font-size: bold;
             border-radius: 5px;
         }
     </style>
@@ -62,7 +68,7 @@ if (isset($_POST["envoyer"])){
     <div class="message-box">
         <?php 
         if ($mailResult) {
-            echo "Ton message est bien envoyé.";
+            echo "Votre message est bien envoyé.";
         } else {
             echo "Une erreur s'est produite.";
         }
