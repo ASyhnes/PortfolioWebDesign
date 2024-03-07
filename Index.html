@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="cardstyle.css">
     <link rel="stylesheet" href="dex.css">
+    <link rel="stylesheet" href="contact.css">
 </head>
 
 <body>
@@ -33,7 +34,12 @@
     <!-- Section Apprentissage -->
     <div class="parallax2">
         <div class="conteneur-presentation">
-            <p>Je tiens à préciser que je suis actuellement en phase d'apprentissage autodidacte dans le domaine du développement web. L'ensemble des sites web présentés sur cette page reflète mon niveau de progression dans ce domaine.<br><br>De zéro, je m'engage à mettre régulièrement à jour ces projets pour refléter au mieux mes évolutions techniques. Chaque site est donc le miroir de mon parcours d'apprentissage et témoigne de ma détermination à progresser et à peaufiner mes compétences en développement web.<br><br>L'ensemble des œuvres graphiques présentées ici sont issues de mes propres travaux.</p>
+            <p>Je tiens à préciser que je suis actuellement en phase d'apprentissage autodidacte dans le domaine du
+                développement web. L'ensemble des sites web présentés sur cette page reflète mon niveau de progression
+                dans ce domaine.<br><br>De zéro, je m'engage à mettre régulièrement à jour ces projets pour refléter au
+                mieux mes évolutions techniques. Chaque site est donc le miroir de mon parcours d'apprentissage et
+                témoigne de ma détermination à progresser et à peaufiner mes compétences en développement
+                web.<br><br>L'ensemble des œuvres graphiques présentées ici sont issues de mes propres travaux.</p>
         </div>
     </div>
 
@@ -140,21 +146,25 @@
             <a href="https://www.linkedin.com/in/chardon-david-730030104/"></a>
         </div>
         <div class="item">
-            <iframe src="https://lumalabs.ai/embed/d99135d0-0061-4d1b-919e-cee6659965b1?mode=sparkles&background=%23ffffff&color=%23000000&showTitle=false&loadBg=true&logoPosition=bottom-left&infoPosition=bottom-right&cinematicVideo=undefined&showMenu=false" frameborder="0" title="luma embed" style="border: none;"></iframe>
+            <iframe
+                src="https://lumalabs.ai/embed/d99135d0-0061-4d1b-919e-cee6659965b1?mode=sparkles&background=%23ffffff&color=%23000000&showTitle=false&loadBg=true&logoPosition=bottom-left&infoPosition=bottom-right&cinematicVideo=undefined&showMenu=false"
+                frameborder="0" title="luma embed" style="border: none;"></iframe>
         </div>
     </div>
 
     <div class="full-width">
         <br>
         À venir: <br>
-        Exemple de compétence non visible: création de scripts JavaScript pour l'automatisation du redimensionnement d'images sous Photoshop
+        Exemple de compétence non visible: création de scripts JavaScript pour l'automatisation du redimensionnement
+        d'images sous Photoshop
         <br>
     </div>
 
     <!-- Reconnaissance RQTH et Alternance EPSI -->
     <div class="conteneur-presentation3">
         <div class="side-text">
-            <a href="https://www.agefiph.fr/aides-handicap/aide-lembauche-en-contrat-dapprentissage-dune-personne-handicapee">
+            <a
+                href="https://www.agefiph.fr/aides-handicap/aide-lembauche-en-contrat-dapprentissage-dune-personne-handicapee">
                 <img src="téléchargement (1).png" alt="Description de l'image" class="link">
             </a>
             <h1>Reconnaissance RQTH</h1>
@@ -168,9 +178,38 @@
             </a>
             <h1>RECHERCHE Alternance EPSI</h1>
             <p>Projet Cursus Cycle 3: Master of Science</p>
-            <span>J'ai été accepté auprès de l'école EPSI pour la rentrée 2023. Je recherche un contrat d'alternance dès le mois de juillet, afin de pouvoir poursuivre mon projet pour devenir développeur.</span>
+            <span>J'ai été accepté auprès de l'école EPSI pour la rentrée 2023. Je recherche un contrat d'alternance dès
+                le mois de juillet, afin de pouvoir poursuivre mon projet pour devenir développeur.</span>
         </div>
+
     </div>
+
+    <!--Contact-->
+    <div class="conteneur-presentation4">
+        <h1>Formulaire de contact</h1>
+        <form action="sendEmail.php" method="post">
+
+            <label for="fname">Nom & prénom</label>
+            <input type="text" id="fname" name="firstname" placeholder="Votre nom et prénom">
+
+            <label for="sujet">Sujet</label>
+            <input type="text" id="sujet" name="sujet" placeholder="L'objet de votre message">
+
+            <label for="emailAddress">Email</label>
+            <input id="emailAddress" type="email" name="email" placeholder="Votre email">
+
+
+            <label for="subject">Message</label>
+            <textarea id="subject" name="subject" placeholder="Votre message" style="height:200px"></textarea>
+
+            <input type="submit" value="Envoyer">
+        </form>
+
+
+
+    </div>
+
+
 
 </body>
 
