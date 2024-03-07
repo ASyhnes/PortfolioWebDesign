@@ -25,7 +25,7 @@ if (isset($_POST["envoyer"])){
         body {
             margin: 0;
             padding: 0;
-            background: url('Backgroundfish.png') no-repeat center center fixed; 
+            background: url('sendbackground.png') no-repeat center center fixed; 
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
