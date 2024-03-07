@@ -58,3 +58,22 @@ input[type=submit]:hover {
 textarea::placeholder, input::placeholder {
   color: rgba(2, 0, 0, 0.479);
 }
+
+
+/*CV*/
+.pa {
+  font-family: 'roboto';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  width: 10vw;
+  padding: 3vw;
+  background-color: rgba(100, 135, 248, 0.842); /* Box semi-transparente */
+  color: rgb(0, 0, 0); /* Couleur du texte */
+  text-decoration: none; /* Enlève le soulignement du texte */
+  border: 2px solid rgba(0, 0, 0, 0.24); /* Bordure de la box */
+  border-radius: 10px; /* Bords arrondis pour la box */
+  font-weight: bold; /* Texte en gras */
+  text-align: center; /* Centre le texte */
+}

@@ -21,7 +21,7 @@
     <div class="parallax1">
         <div class="conteneur-presentation">
             <div class="texte">
-                <h1>DAVID CHARDON</h1>
+                <h1 class="david">DAVID CHARDON</h1>
             </div>
             <img class="image" src="B_N Bridge.png" alt="Illustration David Bridge">
             <div class="texte">
@@ -39,19 +39,20 @@
 
         <div class="conteneur-presentation">
             <div class="full-width3">
-                <h1>Avertissement</h1>
+                <h1 class="avert">Avertissement</h1>
             </div>
-            <p>Je tiens à préciser que je suis actuellement en phase d'apprentissage autodidacte dans le domaine du
+        </br>
+            <p class="avert">Je tiens à préciser que je suis actuellement en phase d'apprentissage      autodidacte dans le domaine du
                 développement web. L'ensemble des sites web présentés sur cette page reflète mon niveau de progression
-                dans ce domaine.<br><br>De zéro, je m'engage à mettre régulièrement à jour ces projets pour refléter au
+                dans ce domaine.<br><br>projets from scratch, je m'engage à mettre régulièrement à jour ces projets pour refléter au
                 mieux mes évolutions techniques. Chaque site est donc le miroir de mon parcours d'apprentissage et
                 témoigne de ma détermination à progresser et à peaufiner mes compétences en développement
-                web.<br><br>L'ensemble des œuvres graphiques présentées ici sont issues de mes propres travaux.</p>
+                web.<br><br>L'ensemble des œuvres graphiques présentées ici sont issues de mes propres travaux.<br><br>contrainte technique pour la réalisation de cette page:<br> Aucun framework, html/css/php seulement.<br>Réalisation en 4 jours</p>
         </div>
     </div>
 
     <div class="full-width">
-        Réalisation de sites web
+        <h2>Réalisation de sites web</h2>
     </div>
 
     <!-- Site Tattoo -->
@@ -152,16 +153,18 @@
         <a href="https://www.linkedin.com/in/chardon-david-730030104/">
             <div class="item3"></div>
         </a>
+        <div>
         <div class="item4">
             <iframe
                 src="https://lumalabs.ai/embed/d99135d0-0061-4d1b-919e-cee6659965b1?mode=sparkles&background=%23ffffff&color=%23000000&showTitle=false&loadBg=true&logoPosition=bottom-left&infoPosition=bottom-right&cinematicVideo=undefined&showMenu=false"
                 frameborder="0" title="luma embed" style="border: none;"></iframe>
         </div>
     </div>
+    </div>
 
     <div class="full-width">
-        <br>
-        À venir: <br>
+        <h2>
+        À venir: </h2>
         Exemple de compétence non visible: création de scripts JavaScript pour l'automatisation du redimensionnement
         d'images sous Photoshop
         <br>
@@ -193,24 +196,32 @@
 
     <!--Contact-->
     <div class="conteneur-presentation4">
-        <h1>Formulaire de contact</h1>
+
+       
+            
+        <a class="pa" href="CV Dev Chardon David.pdf" download="Mon_CV.pdf"><P>Téléchargez mon CV</P></a>
+
+            
+        
+
+        <div><h1 class="david">Formulaire de contact</h1>
         <form action="sendEmail.php" method="post">
 
-            <label for="fname">Nom & prénom</label>
+        
             <input type="text" id="fname" name="nom" placeholder="Votre nom et prénom">
 
-            <label for="sujet">Sujet</label>
+           
             <input type="text" id="sujet" name="objet" placeholder="L'objet de votre message">
 
-            <label for="emailAddress">Email</label>
             <input id="emailAddress" type="email" name="email" placeholder="Votre email">
 
 
-            <label for="subject">Message</label>
+            
             <textarea id="subject" name="message" placeholder="Votre message" style="height:200px"></textarea>
 
             <input type="submit" name="envoyer" value="envoyer" />
         </form>
+    </div>
 
 
 
