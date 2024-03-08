@@ -94,6 +94,25 @@ item::selection {
   animation: flicker3 6s infinite alternate;
 }
 
+.item5 {
+  width: 15vw;
+  height: 15vw;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  background-image: url("insta.jpg");
+  background-size: 100%;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.7px);
+  -webkit-backdrop-filter: blur(6.7px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 0.4rem solid #fff;
+  animation: flicker3 4.3s infinite alternate;
+}
+
 .item4 {
   display: flex;
   justify-content: center;
