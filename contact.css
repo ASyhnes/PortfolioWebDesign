@@ -67,13 +67,39 @@ textarea::placeholder, input::placeholder {
   align-items: center;
   justify-content: center;
   height: 10vh;
-  width: 10vw;
+  width: 50vw;
   padding: 3vw;
-  background-color: rgba(100, 135, 248, 0.842); /* Box semi-transparente */
+  background-color: rgba(241, 243, 248, 0.233); /* Box semi-transparente */
   color: rgb(0, 0, 0); /* Couleur du texte */
   text-decoration: none; /* Enlève le soulignement du texte */
   border: 2px solid rgba(0, 0, 0, 0.24); /* Bordure de la box */
   border-radius: 10px; /* Bords arrondis pour la box */
   font-weight: bold; /* Texte en gras */
   text-align: center; /* Centre le texte */
+  transition: 0.5s ease-in-out;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
+
+.pa:hover {
+  transform: scale(1.1);
+  font-family: 'roboto';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  width: 50vw;
+  padding: 3vw;
+  background-color: rgba(241, 243, 248, 0.404); /* Box semi-transparente */
+  color: rgb(0, 0, 0); /* Couleur du texte */
+  text-decoration: none; /* Enlève le soulignement du texte */
+  border: 2px solid rgba(0, 0, 0, 0.24); /* Bordure de la box */
+  border-radius: 10px; /* Bords arrondis pour la box */
+  font-weight: bold; /* Texte en gras */
+  text-align: center; /* Centre le texte */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
